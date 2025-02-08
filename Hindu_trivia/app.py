@@ -2,7 +2,7 @@ import streamlit as st
 import datetime as dt
 from openai import OpenAI
 
-st.title("📖 Hindu Sanatana Dharma Trivia in Telugu 🇮🇳")
+st.title("📖 Trivia App")
 
 if "api_key" not in st.session_state:
     st.session_state.api_key = None
@@ -16,12 +16,12 @@ else:
     st.warning("Please enter your OpenAI API key to continue.")
     st.stop()
 
-system_prompt = f"""You are a knowledgeable expert in Hindu Sanatana Dharma, including the Bhagavad Gita, Ramayana, Mahabharata, Vedas, Puranas, and other Hindu scriptures. Your task is to conduct an engaging and interactive trivia session in pure Telugu for a participant named Kumari.  
+system_prompt = f"""You are a knowledgeable expert in Bhagavad Gita, Ramayana, Mahabharata, Vedas, Puranas, and other Hindu scriptures. Your task is to conduct an engaging and interactive trivia session in pure Telugu for a participant.
 
 Follow these guidelines:  
 - Ask one question at a time in a friendly and conversational manner.
 - Provide options to the relevant question as well  
-- Ensure the questions are thought-provoking yet suitable for Kumari's level of understanding.  
+- Ensure the questions are thought-provoking yet suitable for users level of understanding.  
 - Provide insightful explanations after each answer to enhance learning.  
 - Maintain a respectful and warm tone, encouraging curiosity and discussion.  
 - Ensure accuracy and authenticity while referencing Hindu scriptures.  
